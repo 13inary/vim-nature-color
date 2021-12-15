@@ -39,7 +39,7 @@ set t_Co=256
 "if has('termguicolors')
 "	set termguicolors
 "endif
-let g:colors_name = "note_code"
+let g:colors_name = "vim-go-markdown-colors"
 
 
 
