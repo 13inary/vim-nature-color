@@ -422,21 +422,6 @@ hi link jsRegexpCharClass SpecialChar
 
 
 
-" CSS Syntax Highlighting
-" =======================
-"  https://github.com/hail2u/vim-css3-syntax
-" hi lessClass
-" hi LessVariable
-hi cssFunctionName  ctermfg=127 ctermbg=NONE cterm=NONE
-
-
-
-" XML Syntax Highlighting
-" =============================
-hi link xmlTag     Repeat
-hi link xmlTagName xmlTag
-hi link xmlEndTag  xmlTag
-
 
 
 
@@ -536,15 +521,6 @@ hi goStringGroup 			ctermfg=121 ctermbg=121 cterm=underline
 hi goStringGroup 			ctermfg=121 ctermbg=121 cterm=underline
 hi goStringGroup 			ctermfg=121 ctermbg=121 cterm=underline
 
-
-
-
-
-
-
-
-
-
 "hi goVariableName 			ctermfg=127 ctermbg=127 cterm=NONE
 "hi goStruct 			ctermfg=127 ctermbg=127 cterm=NONE
 "hi goType 			ctermfg=127 ctermbg=127 cterm=NONE
@@ -599,21 +575,21 @@ hi goStringGroup 			ctermfg=121 ctermbg=121 cterm=underline
 " sign
 hi   CocErrorSign              ctermfg=196   ctermbg=NONE   cterm=NONE
 hi   CocWarningSign            ctermfg=226   ctermbg=NONE   cterm=NONE
-hi   CocInfoSign               ctermfg=121   ctermbg=121    cterm=NONE
-hi   CocHintSign 			   ctermfg=121   ctermbg=121    cterm=NONE
+hi   CocInfoSign ctermfg=121   ctermbg=121    cterm=NONE
+hi   CocHintSign ctermfg=121   ctermbg=121    cterm=NONE
 " specific content
 hi   CocErrorHighlight         ctermfg=253   ctermbg=196   cterm=BOLD
 hi   CocWarningHighlight       ctermfg=253   ctermbg=226   cterm=BOLD
-hi   CocInfoHighlight          ctermfg=121   ctermbg=121    cterm=NONE
-hi   CocHintHighlight          ctermfg=121   ctermbg=121    cterm=NONE
+hi   CocInfoHighlight ctermfg=121   ctermbg=121    cterm=NONE
+hi   CocHintHighlight ctermfg=121   ctermbg=121    cterm=NONE
 "hi CocDeprecatedHighlight* for deprecated code range, links to
 " |CocStrikeThrough| by default.
 "hi CocUnusedHighlight* for unnecessary code range, links to |CocFadeOut| by default.
 " line
 hi   CocErrorLine     ctermfg=NONE   ctermbg=NONE   cterm=NONE
 hi   CocWarningLine   ctermfg=NONE   ctermbg=NONE   cterm=NONE
-hi   CocInfoLine      ctermfg=121   ctermbg=121    cterm=NONE
-hi   CocHintLine      ctermfg=121   ctermbg=121    cterm=NONE
+hi   CocInfoLine ctermfg=121   ctermbg=121    cterm=NONE
+hi   CocHintLine ctermfg=121   ctermbg=121    cterm=NONE
 
 " ===Document highlight related~
 "Highlights used for highlighting same symbols in the buffer at the current cursor position.
@@ -624,8 +600,8 @@ hi   CocHintLine      ctermfg=121   ctermbg=121    cterm=NONE
 " ===Float window/popup related~
 "hi CocFloating ctermfg=121 ctermbg=121 cterm=NONE
 " Default link to |NormalFloat| on neovim and|`Pmenu| on vim.
-hi CocErrorFloat   ctermfg=196 ctermbg=232 cterm=NONE
-hi CocWarningFloat ctermfg=226 ctermbg=232 cterm=NONE
+hi CocErrorFloat   		ctermfg=196 ctermbg=232 cterm=NONE
+hi CocWarningFloat 		ctermfg=226 ctermbg=232 cterm=NONE
 hi CocInfoFloat ctermfg=121 ctermbg=121 cterm=NONE
 hi CocHintFloat ctermfg=121 ctermbg=121 cterm=NONE
 
@@ -691,7 +667,6 @@ hi CocSymbolMethod  ctermfg=121 ctermbg=121 cterm=NONE
 "hi link CocSem_parameter Identifier
 "hi link CocSem_variable Identifier
 hi CocSem_variable  ctermfg=121 ctermbg=121 cterm=NONE
-hi default link CocSem_variable Error
 "hi link CocSem_property Identifier
 "hi link CocSem_enumMember Constant
 "hi link CocSem_event Identifier
