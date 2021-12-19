@@ -593,7 +593,8 @@ hi   CocHintLine ctermfg=121   ctermbg=121    cterm=NONE
 
 " ===Document highlight related~
 "Highlights used for highlighting same symbols in the buffer at the current cursor position.
-"hi *CocHighlightText* default symbol highlight.
+" default symbol highlight, such as same symbol
+hi CocHighlightText ctermfg=NONE   ctermbg=NONE    cterm=underline 
 "hi *CocHighlightRead* for `Read` kind of document symbol.
 "hi *CocHighlightWrite* for `Write` kind of document symbol.
 
