@@ -289,7 +289,7 @@ hi User6 			ctermfg=199 ctermbg=NONE  cterm=BOLD
 " tab pages line, not ative tab page label  file which no select
 hi TabLine	   ctermfg=248	ctermbg=NONE  cterm=underline
 " tab pages line, where there are no labels  blank
-hi TabLineFill	   ctermfg=253	ctermbg=NONE  cterm=underline
+hi TabLineFill	   ctermfg=248	ctermbg=NONE  cterm=underline
 " tab pages line, active tab page label  file which select
 hi TabLineSel	   ctermfg=121	ctermbg=NONE  cterm=underline
 " 'terminal' window command :term ...
