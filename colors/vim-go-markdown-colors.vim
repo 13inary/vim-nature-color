@@ -286,12 +286,12 @@ hi User4 			ctermfg=253 ctermbg=NONE  cterm=NONE
 hi User5 			ctermfg=199 ctermbg=NONE  cterm=NONE
 hi User6 			ctermfg=199 ctermbg=NONE  cterm=BOLD
 
-" tab pages line, not ative tab page label TODO
-hi TabLine	   ctermfg=127	ctermbg=121  cterm=NONE
-" tab pages line, where there are no labels TODO
-hi TabLineFill	   ctermfg=127	ctermbg=121  cterm=NONE
-" tab pages line, active tab page label TODO
-hi TabLineSel	   ctermfg=127	ctermbg=121  cterm=NONE
+" tab pages line, not ative tab page label  file which no select
+hi TabLine	   ctermfg=248	ctermbg=NONE  cterm=underline
+" tab pages line, where there are no labels  blank
+hi TabLineFill	   ctermfg=253	ctermbg=NONE  cterm=underline
+" tab pages line, active tab page label  file which select
+hi TabLineSel	   ctermfg=121	ctermbg=NONE  cterm=underline
 " 'terminal' window command :term ...
 hi Terminal	   ctermfg=214	ctermbg=NONE  cterm=NONE
 " titles for output from ':set all', ':autocmd' etc(such as: markdown ## xxx)
