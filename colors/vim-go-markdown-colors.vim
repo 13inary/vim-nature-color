@@ -485,7 +485,7 @@ hi goImaginaryFloat 	ctermfg=121 ctermbg=121 cterm=underline
 
 " == * & + 
 "hi goOperator 			
-hi goPointerOperator 	ctermfg=121  ctermbg=NONE cterm=underline
+"hi goPointerOperator 	ctermfg=121  ctermbg=NONE cterm=underline
 "hi goPointerOperator 	
 hi goVarArgs 			ctermfg=199  ctermbg=NONE cterm=NONE
 
