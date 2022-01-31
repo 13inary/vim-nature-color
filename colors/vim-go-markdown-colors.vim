@@ -424,6 +424,16 @@ hi link jsRegexpCharClass SpecialChar
 
 
 
+" gitgutter
+" =============
+highlight GitGutterAdd    ctermfg=121 ctermbg=NONE cterm=BOLD
+highlight GitGutterChange ctermfg=226 ctermbg=NONE cterm=BOLD
+highlight GitGutterDelete ctermfg=196 ctermbg=NONE cterm=BOLD
+
+
+
+
+
 
 " vim-go
 " =============
