@@ -283,7 +283,7 @@ hi User1 			ctermfg=196 ctermbg=NONE  cterm=BOLD
 hi User2 			ctermfg=214 ctermbg=NONE  cterm=NONE
 hi User3 			ctermfg=121 ctermbg=NONE  cterm=NONE
 hi User4 			ctermfg=253 ctermbg=NONE  cterm=NONE
-hi User5 			ctermfg=199 ctermbg=NONE  cterm=NONE
+hi User5 			ctermfg=199 ctermbg=NONE  cterm=BOLD
 hi User6 			ctermfg=226 ctermbg=NONE  cterm=BOLD
 
 " tab pages line, not ative tab page label  file which no select
