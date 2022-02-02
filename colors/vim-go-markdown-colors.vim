@@ -363,16 +363,52 @@ hi link helpHyperTextJump Type
 " Markdown Syntax Highlighting
 " ============================
 "  https://github.com/plasticboy/vim-markdown
-hi mkdURL       ctermfg=226 ctermbg=226 cterm=underline
-hi mkdLinkDef   ctermfg=226 ctermbg=226 cterm=NONE
-hi mkdLink      ctermfg=226 ctermbg=226 cterm=NONE
-hi mkdDelimiter ctermfg=226 ctermbg=226 cterm=NONE
-hi mkdListItem  ctermfg=226 ctermbg=226 cterm=NONE
-
+"hi mkdURL       ctermfg=226 ctermbg=226 cterm=underline
+"hi mkdLinkDef   ctermfg=226 ctermbg=226 cterm=NONE
+"hi mkdLink      ctermfg=226 ctermbg=226 cterm=NONE
+"hi mkdDelimiter ctermfg=226 ctermbg=226 cterm=NONE
+"hi mkdListItem  ctermfg=226 ctermbg=226 cterm=NONE
+"
 hi markdownCode	            ctermfg=214 ctermbg=NONE cterm=NONE
-hi markdownError            ctermfg=15  ctermbg=196  cterm=BOLD
-hi markdownCodeBlock        ctermfg=214 ctermbg=NONE cterm=NONE
-hi markdownHeadingDelimiter ctermfg=244 ctermbg=NONE cterm=NONE
+"hi markdownError            ctermfg=15  ctermbg=196  cterm=BOLD
+hi markdownCodeBlock        ctermfg=121 ctermbg=NONE cterm=NONE
+
+hi markdownH1                    	ctermfg=232 ctermbg=NONE cterm=NONE
+hi markdownH2                    	ctermfg=127 ctermbg=NONE cterm=NONE
+hi markdownH3      					ctermfg=199 ctermbg=NONE cterm=NONE
+hi markdownH4                    	ctermfg=196 ctermbg=NONE cterm=NONE
+"hi markdownH5                    htmlH5
+"hi markdownH6                    htmlH6
+hi markdownHeadingRule           	ctermfg=121 ctermbg=121  cterm=NONE
+hi markdownHeadingDelimiter      	ctermfg=244 ctermbg=NONE cterm=NONE
+hi markdownOrderedListMarker     	ctermfg=226 ctermbg=NONE cterm=NONE
+hi markdownListMarker            	ctermfg=226 ctermbg=NONE cterm=NONE
+hi markdownBlockquote            	ctermfg=121 ctermbg=121  cterm=NONE
+hi markdownRule                  	ctermfg=121 ctermbg=121  cterm=NONE
+"
+hi markdownFootnote              	ctermfg=121 ctermbg=121  cterm=NONE
+hi markdownFootnoteDefinition    	ctermfg=121 ctermbg=121  cterm=NONE
+"
+hi markdownLinkText              	ctermfg=39  ctermbg=NONE  cterm=NONE
+hi markdownIdDeclaration         	ctermfg=121 ctermbg=121  cterm=NONE
+hi markdownId                    	ctermfg=121 ctermbg=121  cterm=NONE
+hi markdownAutomaticLink         	ctermfg=121 ctermbg=121  cterm=NONE
+hi markdownUrl                   	ctermfg=39  ctermbg=NONE cterm=underline
+hi markdownUrlTitle              	ctermfg=121 ctermbg=121  cterm=NONE
+hi markdownIdDelimiter           	ctermfg=121 ctermbg=121  cterm=NONE
+hi markdownUrlDelimiter          	ctermfg=121 ctermbg=121  cterm=NONE
+hi markdownUrlTitleDelimiter     	ctermfg=121 ctermbg=121  cterm=NONE
+"
+hi markdownItalic                ctermfg=121 ctermbg=NONE cterm=italic
+hi markdownItalicDelimiter       ctermfg=244 ctermbg=NONE cterm=NONE
+hi markdownBold                  ctermfg=121 ctermbg=NONE cterm=BOLD
+hi markdownBoldDelimiter         ctermfg=244 ctermbg=NONE cterm=NONE
+hi markdownBoldItalic            ctermfg=121 ctermbg=NONE cterm=NONE
+hi markdownBoldItalicDelimiter   ctermfg=244 ctermbg=NONE cterm=NONE
+hi markdownCodeDelimiter         ctermfg=244 ctermbg=NONE cterm=NONE
+"
+hi markdownEscape                ctermfg=121 ctermbg=121  cterm=NONE
+hi markdownError                 ctermfg=121 ctermbg=121  cterm=NONE
 
 
 
