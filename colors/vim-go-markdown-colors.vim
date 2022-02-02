@@ -371,7 +371,8 @@ hi link helpHyperTextJump Type
 "
 hi markdownCode	            ctermfg=214 ctermbg=NONE cterm=NONE
 "hi markdownError            ctermfg=15  ctermbg=196  cterm=BOLD
-hi markdownCodeBlock        ctermfg=121 ctermbg=NONE cterm=NONE
+" \t<content>
+hi markdownCodeBlock        ctermfg=214 ctermbg=NONE cterm=NONE
 
 hi markdownH1                    	ctermfg=232 ctermbg=NONE cterm=NONE
 hi markdownH2                    	ctermfg=127 ctermbg=NONE cterm=NONE
