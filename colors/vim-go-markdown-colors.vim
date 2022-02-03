@@ -383,8 +383,8 @@ hi markdownH4                    	ctermfg=196 ctermbg=NONE cterm=NONE
 hi markdownHeadingRule           	ctermfg=121 ctermbg=121  cterm=NONE
 hi markdownHeadingDelimiter      	ctermfg=244 ctermbg=NONE cterm=NONE
 hi markdownOrderedListMarker     	ctermfg=226 ctermbg=NONE cterm=NONE
-hi markdownListMarker            	ctermfg=226 ctermbg=NONE cterm=NONE
-hi markdownBlockquote            	ctermfg=226 ctermbg=NONE  cterm=NONE
+hi markdownListMarker            	ctermfg=226 ctermbg=NONE cterm=BOLD
+hi markdownBlockquote            	ctermfg=226 ctermbg=NONE cterm=NONE
 hi markdownRule                  	ctermfg=121 ctermbg=121  cterm=NONE
 "
 hi markdownFootnote              	ctermfg=121 ctermbg=121  cterm=NONE
