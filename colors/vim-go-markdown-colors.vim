@@ -624,7 +624,8 @@ hi goStringGroup 			ctermfg=121 ctermbg=121 cterm=underline
 hi   CocErrorSign              ctermfg=196   ctermbg=NONE   cterm=NONE
 hi   CocWarningSign            ctermfg=226   ctermbg=NONE   cterm=NONE
 hi   CocInfoSign ctermfg=121   ctermbg=121    cterm=NONE
-hi   CocHintSign ctermfg=121   ctermbg=121    cterm=NONE
+" error left symbols
+hi   CocHintSign ctermfg=196   ctermbg=NONE    cterm=NONE
 " specific content
 hi   CocErrorHighlight         ctermfg=253   ctermbg=196   cterm=BOLD
 hi   CocWarningHighlight       ctermfg=253   ctermbg=226   cterm=BOLD
@@ -637,7 +638,8 @@ hi   CocHintHighlight ctermfg=121   ctermbg=121    cterm=NONE
 hi   CocErrorLine     ctermfg=NONE   ctermbg=NONE   cterm=NONE
 hi   CocWarningLine   ctermfg=NONE   ctermbg=NONE   cterm=NONE
 hi   CocInfoLine ctermfg=121   ctermbg=121    cterm=NONE
-hi   CocHintLine ctermfg=121   ctermbg=121    cterm=NONE
+" error line color
+hi   CocHintLine ctermfg=NONE   ctermbg=NONE    cterm=NONE
 
 " ===Document highlight related~
 "Highlights used for highlighting same symbols in the buffer at the current cursor position.
