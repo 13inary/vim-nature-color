@@ -2,7 +2,6 @@
 " Filw: custom vim colorscheme
 " Description: suitable for cterm
 " Author:
-" Repository: https://github.com/keysquivered/
 " =======================================
 
 
@@ -39,7 +38,7 @@ set t_Co=256
 "if has('termguicolors')
 "	set termguicolors
 "endif
-let g:colors_name = "vim-go-markdown-colors"
+let g:colors_name = "vim-nature-color"
 
 
 
