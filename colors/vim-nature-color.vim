@@ -483,20 +483,44 @@ hi goFunctionCall 		ctermfg=127 ctermbg=NONE cterm=NONE
 "hi goFunction 			
 " "string"
 hi goString				ctermfg=214 ctermbg=NONE cterm=NONE
+" `string`
+hi goRawString 			ctermfg=214 ctermbg=NONE cterm=NONE
+" imprt "string"
+hi goImportString 		ctermfg=214 ctermbg=NONE cterm=NONE
+" 'c'
+hi goCharacter 			ctermfg=214 ctermbg=NONE cterm=NONE
 " i := 
 hi goVarDefs 			ctermfg=121 ctermbg=NONE cterm=NONE
 " i = 
 hi goVarAssign 			ctermfg=253 ctermbg=NONE cterm=NONE
+" ()
+hi goParen 				ctermfg=253 ctermbg=NONE cterm=NONE
+" {}
+hi goBlock 				ctermfg=253 ctermbg=NONE cterm=NONE
 " name in tyep ... XXXX
 hi goTypeName 			ctermfg=199 ctermbg=NONE cterm=NONE
 " type
 hi goTypeDecl 			ctermfg=199 ctermbg=NONE cterm=NONE
+"goReceiverType
 " Stucdent{}
 hi goTypeConstructor 	ctermfg=199 ctermbg=NONE cterm=NONE
 " strut in type name ....
 hi goDeclType 			ctermfg=199 ctermbg=NONE cterm=NONE
-hi goGenerateVariables 	ctermfg=121 ctermbg=121  cterm=underline
-hi goGenerate 			ctermfg=121 ctermbg=121  cterm=underline
+" func
+hi goDeclaration		ctermfg=199 ctermbg=NONE cterm=NONE
+" chan map bool string error any comparable
+hi goType 				ctermfg=199 ctermbg=NONE cterm=NONE
+" int int8 int16 int32 int64 rune
+hi goSignedInts 		ctermfg=199 ctermbg=NONE cterm=NONE
+" byte uint uint8 uint16 uint32 uint64 uintptr
+hi goUnsignedInts 		ctermfg=199 ctermbg=NONE cterm=NONE
+" float32 float64
+hi goFloats  			ctermfg=199 ctermbg=NONE cterm=NONE
+" complex64 complex128
+hi goComplexes			ctermfg=199 ctermbg=NONE cterm=NONE
+" append cap close complex copy delete imag len
+" make new panic print println real recover
+hi goBuiltins 			ctermfg=199 ctermbg=NONE cterm=NONE
 " "%t"
 "hi link goEscapeC 				yellow_NONE_NONE
 hi goEscapeX 			ctermfg=121 ctermbg=121  cterm=underline
@@ -507,13 +531,63 @@ hi goEscapeError 		ctermfg=121 ctermbg=121  cterm=underline
 " "%c %d"
 "hi link goSpecialString 		yellow_NONE_NONE 
 hi goStringGroup 		ctermfg=121 ctermbg=121  cterm=underline
-
 " var
 hi goVar 				ctermfg=121 ctermbg=NONE cterm=NONE
 " const
 hi goConst 				ctermfg=39 	ctermbg=NONE cterm=NONE
-" spece in var xxx
+" true false
+hi goBoolean 			ctermfg=39 	ctermbg=NONE cterm=NONE
+" nil iota
+hi goPredefinedIdentifiers ctermfg=39 ctermbg=NONE cterm=NONE
+
+
+" // /* */
+"hi def link goComment commant
+" todo
+"hi def link goTodo Todo
+" $GOOS
+"hi def link     goGenerateVariables Special
+" go:generate
+"hi def link     goGenerate          PreProc
+" import\|var\|const spece in var xxx
 "hi goSingleDecl 			ctermfg=121 ctermbg=121 cterm=underline
+" space after []
+"goSpaceError
+
+" goSpaceError
+" goReceiverDecl
+" goReceiverVar
+" goPointerOperator
+" goFunction
+" goReceiverType
+" goSimpleParams
+" goFunctionReturn
+" goParamName
+" goParamType
+
+" goBuildKeyword
+" goBuildDirectives
+" goBuildComment
+" goBuildCommentStart
+" goBuildDirectives
+" goBuildKeyword
+
+" goCoverageNormalText
+" goSameId
+" goDiagnosticWarning
+" goDiagnosticError
+
+" goDeclsFzfKeyword
+" goDeclsFzfFunction
+" goDeclsFzfSpecialComment
+" goDeclsFzfComment
+
+" goCoverageCovered
+" goCoverageUncover
+
+" GoDebugBreakpoint
+" GoDebugCurrent
+
 " 10
 "hi goDecimalInt 	
 hi goDecimalError 		ctermfg=121 ctermbg=121 cterm=underline
@@ -527,79 +601,37 @@ hi goOctalError 		ctermfg=121 ctermbg=121 cterm=underline
 "hi goBinaryInt 	
 hi goBinaryError 		ctermfg=121 ctermbg=121 cterm=underline
 "hi Integer 			
-
 "hi goFloat 				
 hi goImaginary 			ctermfg=121 ctermbg=121 cterm=underline
 hi goImaginaryFloat 	ctermfg=121 ctermbg=121 cterm=underline
-
-
-" == * & + 
-"hi goOperator 			
-"hi goPointerOperator 	ctermfg=121  ctermbg=NONE cterm=underline
-"hi goPointerOperator 	
-hi goVarArgs 			ctermfg=199  ctermbg=NONE cterm=NONE
-
-
-
+hi goVarArgs 			ctermfg=199  ctermbg=199 cterm=underline
 " struct.property
 hi goField 				ctermfg=253 ctermbg=NONE cterm=NONE
-
-
-
 " append cap close complex copy delete imag len
 " make new panic print println real recover
 hi goBuiltins 			ctermfg=199 ctermbg=NONE cterm=NONE
-
-
 " defer go goto return break continue fallthrough
 hi goStatement 			ctermfg=226 ctermbg=NONE cterm=NONE
-
-
+" if else switch select
+hi goConditional 		ctermfg=226 ctermbg=NONE cterm=NONE
+" case default
+hi goLabel 	     		ctermfg=226 ctermbg=NONE cterm=NONE
+" for-range
+hi goRepeat 			ctermfg=226 ctermbg=NONE cterm=NONE
 "import
 hi goImport 			ctermfg=226 ctermbg=NONE cterm=NONE
-
-
 " package
 hi goPackage 			ctermfg=226 ctermbg=NONE cterm=NONE
-"hi goPackageComment 	ctermfg=226 ctermbg=226 cterm=NONE
+" %d %s %v
+hi goFormatSpecifier 	ctermfg=226 ctermbg=NONE cterm=NONE
+hi goPackageComment 	ctermfg=226 ctermbg=226 cterm=underline
 
-
+" unsafe\.Pointer reflect\.\%(Kind\|Type\|Value io\.\%(Reader\|ReadSeeker context\.\%(Context bytes\.\%(Buffer
+hi goExtraType 			ctermfg=196 ctermbg=NONE cterm=NONE
+" == * & + 
+"hi goOperator 			ctermfg=248 ctermbg=NONE cterm=NONE
+"hi goPointerOperator 	ctermfg=121  ctermbg=NONE cterm=underline
 hi goStringGroup 			ctermfg=121 ctermbg=121 cterm=underline
-hi goStringGroup 			ctermfg=121 ctermbg=121 cterm=underline
-hi goStringGroup 			ctermfg=121 ctermbg=121 cterm=underline
-hi goStringGroup 			ctermfg=121 ctermbg=121 cterm=underline
-hi goStringGroup 			ctermfg=121 ctermbg=121 cterm=underline
-hi goStringGroup 			ctermfg=121 ctermbg=121 cterm=underline
-
-"hi goVariableName 			ctermfg=127 ctermbg=127 cterm=NONE
-"hi goStruct 			ctermfg=127 ctermbg=127 cterm=NONE
-"hi goType 			ctermfg=127 ctermbg=127 cterm=NONE
-"hi goVariable 			ctermfg=127 ctermbg=127 cterm=NONE
-"let g:go_highlight_types = 1
-"let g:go_highlight_variable_assignments = 0
-"let g:go_highlight_variable_declarations = 0
-"let g:go_highlight_array_whitespace_error = 1
-"let g:go_highlight_build_constraints = 1
-"let g:go_highlight_chan_whitespace_error = 1
-"let g:go_highlight_extra_types = 1
-"let g:go_highlight_fields = 1
-"let g:go_highlight_format_strings = 1
-"let g:go_highlight_generate_tags = 1
-"let g:go_highlight_methods = 1
-"let g:go_highlight_operators = 1
-"let g:go_highlight_space_tab_error = 1
-"let g:go_highlight_string_spellcheck = 1
-"let g:go_highlight_structs = 1
-"let g:go_highlight_trailing_whitespace_error = 1
-"let g:go_doc_keywordprg_enabled = 0
-"let g:go_term_mode = "vertical splist"
-"let g:go_echo_go_info = 0
-"let g:go_doc_popup_window = 1
-"let g:go_def_mapping_enabled = 0
-"let g:go_template_autocreate = 0
-"let g:go_textobj_enabled = 0
-"let g:go_auto_type_info = 1
-"let g:go_def_mapping_enabled = 0
 
 
 
