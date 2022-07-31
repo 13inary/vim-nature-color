@@ -282,11 +282,11 @@ hi User1 			ctermfg=196 ctermbg=NONE  cterm=BOLD
 hi User2 			ctermfg=214 ctermbg=NONE  cterm=NONE
 hi User3 			ctermfg=121 ctermbg=NONE  cterm=NONE
 hi User4 			ctermfg=253 ctermbg=NONE  cterm=NONE
-hi User5 			ctermfg=199 ctermbg=NONE  cterm=BOLD
+hi User5 			ctermfg=232 ctermbg=248  cterm=BOLD
 hi User6 			ctermfg=226 ctermbg=NONE  cterm=BOLD
 hi User7 			ctermfg=199 ctermbg=NONE  cterm=NONE
 hi User8 			ctermfg=121 ctermbg=NONE  cterm=BOLD
-hi User9 			ctermfg=127 ctermbg=NONE  cterm=BOLD
+hi User9 			ctermfg=232 ctermbg=248  cterm=BOLD
 
 " tab pages line, not ative tab page label  file which no select
 hi TabLine	   ctermfg=248	ctermbg=NONE  cterm=underline
