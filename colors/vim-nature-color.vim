@@ -720,7 +720,8 @@ hi CocPumSearch 			ctermfg=39 ctermbg=NONE cterm=NONE
 "hi CocSymbolNamespace  
 "hi CocSymbolPackage  
 "hi CocSymbolClass  
-hi CocSymbolMethod  ctermfg=121 ctermbg=121 cterm=NONE
+" symbol(f) of outline
+hi CocSymbolMethod  ctermfg=127 ctermbg=NONE cterm=NONE
 "hi CocSymbolProperty  
 "hi CocSymbolField  
 "hi CocSymbolConstructor  
