@@ -661,8 +661,8 @@ hi   CocInfoSign ctermfg=121   ctermbg=121    cterm=NONE
 " error left symbols
 hi   CocHintSign ctermfg=196   ctermbg=NONE    cterm=NONE
 " specific content
-hi   CocErrorHighlight         ctermfg=253   ctermbg=196   cterm=BOLD
-hi   CocWarningHighlight       ctermfg=253   ctermbg=226   cterm=BOLD
+hi   CocErrorHighlight         ctermfg=232   ctermbg=196   cterm=BOLD
+hi   CocWarningHighlight       ctermfg=232   ctermbg=226   cterm=BOLD
 hi   CocInfoHighlight ctermfg=121   ctermbg=121    cterm=NONE
 hi   CocHintHighlight ctermfg=121   ctermbg=121    cterm=NONE
 "hi CocDeprecatedHighlight* for deprecated code range, links to
@@ -678,7 +678,7 @@ hi   CocHintLine ctermfg=NONE   ctermbg=NONE    cterm=NONE
 " ===Document highlight related~
 "Highlights used for highlighting same symbols in the buffer at the current cursor position.
 " default symbol highlight, such as same symbol
-hi CocHighlightText ctermfg=NONE   ctermbg=NONE    cterm=underline 
+hi CocHighlightText ctermfg=NONE   ctermbg=NONE    cterm=inverse
 "hi *CocHighlightRead* for `Read` kind of document symbol.
 "hi *CocHighlightWrite* for `Write` kind of document symbol.
 
@@ -701,6 +701,17 @@ hi CocHintFloat ctermfg=121 ctermbg=121 cterm=NONE
 "hi CocTreeDescription* for description beside label.
 "hi CocTreeOpenClose* for open and close icon in tree view.
 "hi CocTreeSelected* for highlight lines contains selected node.
+
+" Popup menu related~
+" match input key
+hi CocPumSearch 			ctermfg=39 ctermbg=NONE cterm=NONE
+" end of suggest key (~)
+"hi CocPumDetail 			ctermfg=121 ctermbg=121 cterm=NONE
+"hi CocPumMenu 			ctermfg=121 ctermbg=121 cterm=NONE
+" symbol which end of suggest key
+"hi CocPumShortcut 			ctermfg=121 ctermbg=121 cterm=NONE
+"hi CocPumDeprecated 			ctermfg=121 ctermbg=121 cterm=NONE
+"hi CocPumVirtualText 			ctermfg=121 ctermbg=121 cterm=NONE
 
 " ===Symbol icons~
 "Highlight groups for symbol icons, including:
@@ -737,6 +748,8 @@ hi CocSymbolMethod  ctermfg=121 ctermbg=121 cterm=NONE
 "CocCodeLens* for virtual text of codeLens.
 "CocCursorRange* for ranges of activated cursors.
 "CocHoverRange* for range of current hovered symbol.
+" such as: select suggest
+hi CocMenuSel 					ctermfg=232 ctermbg=214 cterm=BOLD
 "CocMenuSel* for current menu item in menu dialog, works on neovim only since
 "vim doesn't support change highlight group of cursorline inside popup.
 "CocSelectedRange* for highlight ranges of outgoing calls.
