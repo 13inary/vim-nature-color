@@ -207,8 +207,8 @@ hi EndOfBuffer	   ctermfg=248	ctermbg=NONE cterm=NONE
 hi ErrorMsg	   ctermfg=15	ctermbg=196  cterm=bold
 " the column separating vertically split windows(:vsp middle line)
 hi VertSplit	   ctermfg=232 	ctermbg=253  cterm=NONE
-" line used for closed folds TODO
-hi Folded	   ctermfg=39	ctermbg=127  cterm=NONE
+" line used for closed folds
+hi Folded	   ctermfg=248	ctermbg=232  cterm=NONE
 " 'foldcolumn' TODO
 hi FoldColumn	   ctermfg=39	ctermbg=127  cterm=NONE
 " column where 'signs' are displayed vim-ale-left-column
