@@ -65,6 +65,37 @@ let myPink		=   199
 " 127~129
 let myPurple	=   127
 
+hi MYtest               ctermfg=248   ctermbg=NONE cterm=italic
+
+hi MYGreen              ctermfg=121  ctermbg=NONE cterm=NONE
+hi MYGreenItalic        ctermfg=121  ctermbg=NONE cterm=italic
+hi MYBlueGreen          ctermfg=37   ctermbg=NONE cterm=NONE
+hi MYBlueGreenItalic    ctermfg=37   ctermbg=NONE cterm=italic
+hi MYGemGreen           ctermfg=43   ctermbg=NONE cterm=NONE
+
+hi MYGray               ctermfg=248  ctermbg=NONE cterm=NONE
+hi MYGrayItalic         ctermfg=248  ctermbg=NONE cterm=italic
+
+hi MYWhite              ctermfg=254  ctermbg=NONE cterm=NONE
+
+hi MYBlack              ctermfg=232  ctermbg=NONE cterm=NONE
+
+hi MYBlue               ctermfg=39   ctermbg=NONE cterm=NONE
+hi MYBlueItalic         ctermfg=39   ctermbg=NONE cterm=italic
+
+hi MYYellow             ctermfg=226  ctermbg=NONE cterm=NONE
+hi MYYellowItalic       ctermfg=226  ctermbg=NONE cterm=italic
+
+hi MYOrange             ctermfg=214  ctermbg=NONE cterm=NONE
+
+hi MYRed                ctermfg=196  ctermbg=NONE cterm=NONE
+
+hi MYPink               ctermfg=199  ctermbg=NONE cterm=NONE
+hi MYPinkItalic         ctermfg=199  ctermbg=NONE cterm=italic
+hi MYRedPink            ctermfg=162  ctermbg=NONE cterm=NONE
+
+hi MYPurple             ctermfg=127  ctermbg=NONE cterm=NONE
+
 
 
 
@@ -478,49 +509,46 @@ highlight GitGutterChangeDelete  ctermfg=199 ctermbg=NONE cterm=BOLD
 " vim-go
 " =============
 " use function
-hi goFunctionCall 		ctermfg=127 ctermbg=NONE cterm=NONE
+hi link goFunctionCall 				MYRedPink
 " function name 
 "hi goFunction 			
 " "string"
-hi goString				ctermfg=214 ctermbg=NONE cterm=NONE
+hi link goString 					MYOrange
 " `string`
-hi goRawString 			ctermfg=214 ctermbg=NONE cterm=NONE
+hi link goRawString 				MYOrange
 " imprt "string"
-hi goImportString 		ctermfg=214 ctermbg=NONE cterm=NONE
+hi link goImportString 				MYOrange
 " 'c'
-hi goCharacter 			ctermfg=214 ctermbg=NONE cterm=NONE
+hi link goCharacter 				MYOrange
 " i := 
-hi goVarDefs 			ctermfg=121 ctermbg=NONE cterm=NONE
+hi link goVarDefs 					MYGreen
 " i = 
-hi goVarAssign 			ctermfg=253 ctermbg=NONE cterm=NONE
+hi link goVarAssign 				MYWhite
 " ()
 hi goParen 				ctermfg=253 ctermbg=NONE cterm=NONE
 " {}
-hi goBlock 				ctermfg=253 ctermbg=NONE cterm=NONE
-" name in tyep ... XXXX
-hi goTypeName 			ctermfg=199 ctermbg=NONE cterm=NONE
+hi goBlock 				ctermfg=199 ctermbg=NONE cterm=NONE
+" name in type ... XXXX
+hi link goTypeName 					MYBlueGreenItalic
 " type
-hi goTypeDecl 			ctermfg=199 ctermbg=NONE cterm=NONE
+hi link goTypeDecl 					MYGrayItalic
 "goReceiverType
 " Stucdent{}
-hi goTypeConstructor 	ctermfg=199 ctermbg=NONE cterm=NONE
+hi link goTypeConstructor 			MYBlueGreenItalic
 " strut in type name ....
-hi goDeclType 			ctermfg=199 ctermbg=NONE cterm=NONE
+hi link goDeclType 					MYGrayItalic
 " func
-hi goDeclaration		ctermfg=199 ctermbg=NONE cterm=NONE
+hi link goDeclaration 				MYGrayItalic
 " chan map bool string error any comparable
-hi goType 				ctermfg=199 ctermbg=NONE cterm=NONE
+hi link goType 						MYBlueGreenItalic
 " int int8 int16 int32 int64 rune
-hi goSignedInts 		ctermfg=199 ctermbg=NONE cterm=NONE
+hi link goSignedInts 				MYBlueGreenItalic
 " byte uint uint8 uint16 uint32 uint64 uintptr
-hi goUnsignedInts 		ctermfg=199 ctermbg=NONE cterm=NONE
+hi link goUnsignedInts 				MYBlueGreenItalic
 " float32 float64
-hi goFloats  			ctermfg=199 ctermbg=NONE cterm=NONE
+hi link goFloats 					MYBlueGreenItalic
 " complex64 complex128
-hi goComplexes			ctermfg=199 ctermbg=NONE cterm=NONE
-" append cap close complex copy delete imag len
-" make new panic print println real recover
-hi goBuiltins 			ctermfg=199 ctermbg=NONE cterm=NONE
+hi link goComplexes					MYBlueGreenItalic
 " "%t"
 "hi link goEscapeC 				yellow_NONE_NONE
 hi goEscapeX 			ctermfg=121 ctermbg=121  cterm=underline
@@ -532,13 +560,13 @@ hi goEscapeError 		ctermfg=121 ctermbg=121  cterm=underline
 "hi link goSpecialString 		yellow_NONE_NONE 
 hi goStringGroup 		ctermfg=121 ctermbg=121  cterm=underline
 " var
-hi goVar 				ctermfg=121 ctermbg=NONE cterm=NONE
+hi link goVar 						MYGreenItalic
 " const
-hi goConst 				ctermfg=39 	ctermbg=NONE cterm=NONE
+hi link goConst 					MYBlueItalic
 " true false
-hi goBoolean 			ctermfg=39 	ctermbg=NONE cterm=NONE
+hi link goBoolean 					MYBlueItalic
 " nil iota
-hi goPredefinedIdentifiers ctermfg=39 ctermbg=NONE cterm=NONE
+hi link goPredefinedIdentifiers 	MYBlueItalic
 
 
 " // /* */
@@ -609,25 +637,25 @@ hi goVarArgs 			ctermfg=199  ctermbg=199 cterm=underline
 hi goField 				ctermfg=253 ctermbg=NONE cterm=NONE
 " append cap close complex copy delete imag len
 " make new panic print println real recover
-hi goBuiltins 			ctermfg=199 ctermbg=NONE cterm=NONE
+hi link goBuiltins 					MYPinkItalic
 " defer go goto return break continue fallthrough
-hi goStatement 			ctermfg=226 ctermbg=NONE cterm=NONE
+hi link goStatement 				MYYellowItalic
 " if else switch select
-hi goConditional 		ctermfg=226 ctermbg=NONE cterm=NONE
+hi link goConditional 				MYYellowItalic
 " case default
-hi goLabel 	     		ctermfg=226 ctermbg=NONE cterm=NONE
+hi link goLabel 					MYYellowItalic
 " for-range
-hi goRepeat 			ctermfg=226 ctermbg=NONE cterm=NONE
+hi link goRepeat 					MYYellowItalic
 "import
-hi goImport 			ctermfg=226 ctermbg=NONE cterm=NONE
+hi link goImport 					MYYellowItalic
 " package
-hi goPackage 			ctermfg=226 ctermbg=NONE cterm=NONE
+hi link goPackage 					MYYellowItalic
 " %d %s %v
-hi goFormatSpecifier 	ctermfg=226 ctermbg=NONE cterm=NONE
+hi link goFormatSpecifier 			MYYellowItalic
 hi goPackageComment 	ctermfg=226 ctermbg=226 cterm=underline
 
 " unsafe\.Pointer reflect\.\%(Kind\|Type\|Value io\.\%(Reader\|ReadSeeker context\.\%(Context bytes\.\%(Buffer
-hi goExtraType 			ctermfg=196 ctermbg=NONE cterm=NONE
+hi link goExtraType 				MYRed
 " == * & + 
 "hi goOperator 			ctermfg=248 ctermbg=NONE cterm=NONE
 "hi goPointerOperator 	ctermfg=121  ctermbg=NONE cterm=underline
