@@ -482,160 +482,202 @@ hi! link GitGutterChangeDelete          MYPinkBold
 
 
 
-" vim-go
+" golang
+" /usr/share/vim/vim82/syntax/go.vim
 " =============
-" use function
-hi! link goFunctionCall                 MYRedPink
-" function name 
-"hi goFunction 			
-" "string"
-hi! link goString                       MYOrange
-" `string`
-hi! link goRawString                    MYGray
-" imprt "string"
-hi! link goImportString                 MYOrange
-" 'c'
-hi! link goCharacter                    MYOrange
-" i := 
-hi! link goVarDefs                      MYGreen
-" i = 
-hi! link goVarAssign                    MYWhite
-" ()
-hi! link goParen                        MYSWhite
-" {}
-hi! link goBlock                        MYGray
-" type <name> XXXX
-hi! link goTypeName                     MYBlueGreenItalic
-" type
-hi! link goTypeDecl                     MYGrayItalic
-"goReceiverType
-" Stucdent{}
-hi! link goTypeConstructor              MYBlueGreenItalic
-" type name <...>
-hi! link goDeclType                     MYGrayItalic
-" func
-hi! link goDeclaration                  MYGrayItalic
-" chan map bool string error any comparable
-hi! link goType                         MYBlueGreenItalic
-" int int8 int16 int32 int64 rune
-hi! link goSignedInts                   MYBlueGreenItalic
-" byte uint uint8 uint16 uint32 uint64 uintptr
-hi! link goUnsignedInts                 MYBlueGreenItalic
-" float32 float64
-hi! link goFloats                       MYBlueGreenItalic
-" complex64 complex128
-hi! link goComplexes                    MYBlueGreenItalic
-" "%t"
-"hi link goEscapeC 				yellow_NONE_NONE
-hi goEscapeX 			ctermfg=121 ctermbg=121  cterm=underline
-hi goEscapeU 			ctermfg=121 ctermbg=121  cterm=underline
-hi goEscapeBigU 		ctermfg=121 ctermbg=121  cterm=underline
-hi goEscapeOctal 		ctermfg=121 ctermbg=121  cterm=underline
-hi goEscapeError 		ctermfg=121 ctermbg=121  cterm=underline
-" "%c %d"
-"hi link goSpecialString 		yellow_NONE_NONE 
-hi goStringGroup 		ctermfg=121 ctermbg=121  cterm=underline
+" package
+hi! link goPackage                      MYYellowItalic
+"import
+hi! link goImport                       MYYellowItalic
 " var
 hi! link goVar                          MYGreenItalic
 " const
 hi! link goConst                        MYBlueItalic
+
+" defer go goto return break continue fallthrough
+hi! link goStatement                    MYYellowItalic
+" if else switch select
+"hi! link goConditional                  MYYellowItalic
+" case default
+"hi! link goLabel                        MYYellowItalic
+" for-range
+"hi! link goRepeat                       MYYellowItalic
+
+" chan map bool string error any comparable
+"hi! link goType                         MYBlueGreenItalic
+" int int8 int16 int32 int64 rune
+"hi! link goSignedInts                   MYBlueGreenItalic
+" byte uint uint8 uint16 uint32 uint64 uintptr
+"hi! link goUnsignedInts                 MYBlueGreenItalic
+" float32 float64
+"hi! link goFloats                       MYBlueGreenItalic
+" complex64 complex128
+"hi! link goComplexes                    MYBlueGreenItalic
+
+" append cap close complex copy delete imag len
+" make new panic print println real recover
+hi! link goBuiltins                     MYPinkItalic
 " true false
 hi! link goBoolean                      MYBlueItalic
 " nil iota
 hi! link goPredefinedIdentifiers        MYBlueItalic
 
+" total line: // /* */
+"hi! link goComment                      MYGray
 
-" // /* */
-"hi def link goComment commant
-" todo
-"hi def link goTodo Todo
-" $GOOS
-"hi def link     goGenerateVariables Special
+"let g:go_highlight_generate_tags = 0
 " go:generate
-"hi def link     goGenerate          PreProc
-" import\|var\|const spece in var xxx
-"hi goSingleDecl 			ctermfg=121 ctermbg=121 cterm=underline
-" space after []
-"goSpaceError
+"hi! link goGenerate                     MYTest
+" $GOARCH $GOOS $GOFILE $GOLINE $GOPACKAGE $DOLLAR
+"hi! link goGenerateVariables            MYTest
 
-" goSpaceError
-" goReceiverDecl
-" goReceiverVar
-" goPointerOperator
-" goFunction
-" goReceiverType
-" goSimpleParams
-" goFunctionReturn
-" goParamName
-" goParamType
+" \\[0-7]\{3}
+hi goEscapeOctal 		ctermfg=121 ctermbg=226  cterm=underline
+" \n \\[abfnrtv\\'"]
+hi! link goEscapeC                      MYYellowItalic
+" \\x\x\{2}
+hi goEscapeX 			ctermfg=121 ctermbg=121  cterm=underline
+" \\u\x\{4}
+hi goEscapeU 			ctermfg=121 ctermbg=121  cterm=underline
+" \\U\x\{8}
+hi goEscapeBigU 		ctermfg=121 ctermbg=121  cterm=underline
+" "%c %d"
+hi goSpecialString      ctermfg=121 ctermbg=121  cterm=underline
+" "%t"
+hi goEscapeError 		ctermfg=121 ctermbg=121  cterm=underline
 
-" goBuildKeyword
-" goBuildDirectives
-" goBuildComment
-" goBuildCommentStart
-" goBuildDirectives
-" goBuildKeyword
-
-" goCoverageNormalText
-" goSameId
-" goDiagnosticWarning
-" goDiagnosticError
-
-" goDeclsFzfKeyword
-" goDeclsFzfFunction
-" goDeclsFzfSpecialComment
-" goDeclsFzfComment
-
-" goCoverageCovered
-" goCoverageUncover
-
-" GoDebugBreakpoint
-" GoDebugCurrent
-
-" 10
-"hi goDecimalInt 	
-hi goDecimalError 		ctermfg=121 ctermbg=121 cterm=underline
-" 16
-"hi goHexadecimalInt 	
-hi goHexadecimalError 	ctermfg=121 ctermbg=121 cterm=underline
-" 8
-"hi goOctalInt 	
-hi goOctalError 		ctermfg=121 ctermbg=121 cterm=underline
-" 2
-"hi goBinaryInt 	
-hi goBinaryError 		ctermfg=121 ctermbg=121 cterm=underline
-"hi Integer 			
-"hi goFloat 				
-hi goImaginary 			ctermfg=121 ctermbg=121 cterm=underline
-hi goImaginaryFloat 	ctermfg=121 ctermbg=121 cterm=underline
-hi goVarArgs 			ctermfg=199  ctermbg=199 cterm=underline
-" struct.property
-hi! link goField                        MYSWhite
-" append cap close complex copy delete imag len
-" make new panic print println real recover
-hi! link goBuiltins                     MYPinkItalic
-" defer go goto return break continue fallthrough
-hi! link goStatement                    MYYellowItalic
-" if else switch select
-hi! link goConditional                  MYYellowItalic
-" case default
-hi! link goLabel                        MYYellowItalic
-" for-range
-hi! link goRepeat                       MYYellowItalic
-"import
-hi! link goImport                       MYYellowItalic
-" package
-hi! link goPackage                      MYYellowItalic
+"let g:go_highlight_format_strings = 1
 " %d %s %v
 hi! link goFormatSpecifier              MYYellowItalic
-hi goPackageComment 	ctermfg=226 ctermbg=226 cterm=underline
 
-" unsafe\.Pointer reflect\.\%(Kind\|Type\|Value io\.\%(Reader\|ReadSeeker context\.\%(Context bytes\.\%(Buffer
+"let g:go_highlight_string_spellcheck = 1
+" "string"
+"hi! link goString                       MYOrange
+" `string`
+hi! link goRawString                    MYGray
+
+" 'c'
+"hi! link goCharacter                    MYOrange
+
+" import var const: var< >xxx
+"hi! link goSingleDecl                   MYNone
+
+" 10
+"hi! link goDecimalInt                   MYRed
+hi! link goDecimalError                 MYBlackRedBold
+" 16
+"hi goHexadecimalInt 	ctermfg=121 ctermbg=121 cterm=underline
+hi! link goHexadecimalError                  MYBlackRedBold
+" 8
+"hi goOctalInt 	        ctermfg=121 ctermbg=121 cterm=underline
+hi! link goOctalError                   MYBlackRedBold
+" 2
+"hi goBinaryInt 	        ctermfg=121 ctermbg=121 cterm=underline
+hi! link goBinaryError                  MYBlackRedBold
+" 10 16 8 2 
+"hi! link Integer                        MYBlue
+
+" 3.14
+"hi! link goFloat                        MYBlue
+
+" \<-\=\d\+i\> \<-\=\d\+[Ee][-+]\=\d\+i\>
+hi! link goImaginary                    MYTest
+" \<-\=\d\+\.\d*\%([Ee][-+]\=\d\+\)\=i\> \<-\=\.\d\+\%([Ee][-+]\=\d\+\)\=i\>
+hi! link goImaginaryFloat               MYTest
+
+"let g:go_highlight_array_whitespace_error = 0 " \%(\[\]\)\@<=\s\+
+"let g:go_highlight_chan_whitespace_error = 0 " \%(\%(\<chan\>\)\@<!<-\)\@<=\s\+\%(\<chan\>\)\@=
+"let g:go_highlight_space_tab_error = 0 "  \+\t
+"let g:go_highlight_trailing_whitespace_error = 0 " \s\+$
+"hi! link goSpaceError                   MYTest
+
+"let g:go_highlight_extra_types = 0
+let g:go_highlight_extra_types = 1
+" unsafe.Pointer reflect.(Kind|Type|Value) io.(Reader|ReadSeeker|ReadWriter|ReadCloser|ReadWriteCloser|Writer|WriteCloser|Seeker) context.Context bytes.Buffer
 hi! link goExtraType                    MYWhiteBlueItalic
+
+" todo
+hi! link goTodo                         MYBlackYellowBold
+
+"let g:go_highlight_operators = 0
+let g:go_highlight_operators = 1
 " == * & + 
-"hi goOperator 			ctermfg=248 ctermbg=NONE cterm=NONE
-"hi goPointerOperator 	ctermfg=121  ctermbg=NONE cterm=underline
-hi goStringGroup 			ctermfg=121 ctermbg=121 cterm=underline
+hi! link goOperator                     MYRed
+
+" function(e <...>type)
+hi! link goVarArgs                      MYPink
+
+"let g:go_highlight_functions = 0
+let g:go_highlight_functions = 1
+" func
+"hi! link goDeclaration                  MYGrayItalic
+" (<a> *A) function()
+"hi! link goReceiverVar                  MYSWhite
+" (a <*>A) function().
+hi! link goPointerOperator              MYRed
+" <function>().
+"hi! link goFunction                     MYRedPink
+" (a *<A>) function(). /\w\+/
+"hi! link goReceiverType                 MYBlueGreenItalic
+" <(a *A)> function(). /(\s*\w\+\%(\s\+\*\?\s*\w\+\)\?\s*)\ze\s*\w/
+hi! link goReceiver                     MYPink
+"let g:go_highlight_function_parameters = 0
+" function<()>
+"hi! link goSimpleParams                 MYGray
+" function() <()>
+"hi! link goFunctionReturn               MYGray
+" function(<a> int)
+"hi! link goParamName                    MYSWhite
+" /\%([^,)]\|\_s\)\+,\?/
+"hi! link goParamType                    MYBlueGreenItalic
+
+"let g:go_highlight_function_calls = 0
+let g:go_highlight_function_calls = 1
+" use function
+hi! link goFunctionCall                 MYRedPink
+
+"let g:go_highlight_fields = 0
+" struct.property
+"hi! link goField                        MYSWhite
+
+"let g:go_highlight_types = 0
+let g:go_highlight_types = 1
+" Stucdent{}
+hi! link goTypeConstructor              MYBlueGreenItalic
+" type
+"hi! link goTypeDecl                     MYGrayItalic
+" type <name> XXXX
+hi! link goTypeName                     MYBlueGreenItalic
+" type name <...>
+"hi! link goDeclType                     MYGrayItalic
+
+"let g:go_highlight_variable_assignments = 0
+" i = 
+"hi! link goVarAssign                    MYWhite
+
+"let g:go_highlight_variable_declarations = 0
+" i := 
+hi! link goVarDefs                      MYGreen
+
+"let g:go_highlight_build_constraints = 0
+" +build go:build
+"hi! link goBuildKeyword                 MYTest
+" android darwin dragonfly freebsd linux nacl netbsd openbsd plan9
+" solaris windows 386 amd64 amd64p32 arm armbe arm64 arm64be ppc64
+" ppc64le mips mipsle mips64 mips64le mips64p32 mips64p32le ppc
+" s390 s390x sparc sparc64 cgo ignore race
+"hi! link goBuildDirectives              MYTest
+"hi! link goBuildCommentStart            MYTest
+"hi! link goPackageComment               MYTest
+
+hi! link goCoverageNormalText           MYTest
+
+" imprt "string"
+"hi! link goImportString                 MYRed
+" ()
+"hi! link goParen                        MYSWhite
+" {}
+"hi! link goBlock                        MYGray
 
 
 
