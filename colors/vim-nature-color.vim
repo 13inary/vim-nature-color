@@ -273,8 +273,8 @@ hi! link CursorLineNr                   MYGreenUnderline
 hi! link MatchParen                     MYBlackYellowBold
 " 'showmode' message (e.g. --INSERT-- )
 hi! link ModeMsg                        MYGray
-" moremsg TODO
-hi! link MoreMsg                        MYTest
+" moremsg. such as: when readonly open file, file is change
+hi! link MoreMsg                        MYSWhite
 " '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text(e.g. ">" displayed when a double-wide character doesn't fit at the end of the line)(@@@ on the bottom)
 hi! link NonText                        MYOrange
 " nomal text(normal mode)
