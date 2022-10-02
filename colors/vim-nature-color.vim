@@ -44,58 +44,70 @@ let g:colors_name = "vim-nature-color"
 
 " ColorPallete
 " ============
-" 15 7 253
-let myWhite		=   253
-" 244~250
-let myGray		=   248
-" 232
-let myBlack		=   232
-" 32 38 39
-let myBlue		=   39
-" 79 121 85 49 122
-let myGreen		=   121
-" 11 226
-let myYellow	=   226
-" 172 214
-let myOrange	=   214
-" 160 9 196
-let myRed		=   196
-" 199 162
-let myPink		=   199
-" 127~129
-let myPurple	=   127
-
-hi MYtest               ctermfg=248   ctermbg=NONE cterm=italic
+hi MYTest               ctermfg=226  ctermbg=121 cterm=italic
 
 hi MYGreen              ctermfg=121  ctermbg=NONE cterm=NONE
-hi MYGreenItalic        ctermfg=121  ctermbg=NONE cterm=italic
+hi MYGreenItalic        ctermfg=121  ctermbg=NONE cterm=ITALIC
+hi MYGreenUnderline     ctermfg=121  ctermbg=NONE cterm=underline
+hi MYGreenBold          ctermfg=121  ctermbg=NONE cterm=BOLD
 hi MYBlueGreen          ctermfg=37   ctermbg=NONE cterm=NONE
 hi MYBlueGreenItalic    ctermfg=37   ctermbg=NONE cterm=italic
 hi MYGemGreen           ctermfg=43   ctermbg=NONE cterm=NONE
 
 hi MYGray               ctermfg=248  ctermbg=NONE cterm=NONE
 hi MYGrayItalic         ctermfg=248  ctermbg=NONE cterm=italic
+hi MYGrayBlack          ctermfg=248  ctermbg=232  cterm=NONE
+hi MYGrayBlackItalic    ctermfg=248  ctermbg=232  cterm=ITALIC
 
+hi MYSWhite             ctermfg=253  ctermbg=NONE cterm=NONE
 hi MYWhite              ctermfg=254  ctermbg=NONE cterm=NONE
+hi MYWhiteRedBold       ctermfg=254  ctermbg=196  cterm=bold
+hi MYBWhiteRedBold      ctermfg=15   ctermbg=196  cterm=bold
 
 hi MYBlack              ctermfg=232  ctermbg=NONE cterm=NONE
+hi MYBlackSWhite        ctermfg=232  ctermbg=253  cterm=NONE
+hi MYBlackGreenBold     ctermfg=232  ctermbg=121  cterm=bold
+hi MYBlackRedBold       ctermfg=232  ctermbg=196  cterm=BOLD
+hi MYBlackOrangeBold    ctermfg=232  ctermbg=214  cterm=bold
+hi MYBlackYellowBold    ctermfg=232  ctermbg=226  cterm=BOLD
+hi MYBlackBBlack        ctermfg=232	 ctermbg=244  cterm=NONE
+hi MYBlackGrayBold      ctermfg=232  ctermbg=248  cterm=BOLD
+hi MYBBlack             ctermfg=244  ctermbg=NONE cterm=NONE
 
 hi MYBlue               ctermfg=39   ctermbg=NONE cterm=NONE
 hi MYBlueItalic         ctermfg=39   ctermbg=NONE cterm=italic
+hi MYBlueUnderline      ctermfg=39   ctermbg=NONE cterm=underline
+hi MYBlueBold           ctermfg=39   ctermbg=NONE cterm=bold
+hi MYBlueBlack          ctermfg=39   ctermfg=232  cterm=NONE
+hi MYBlueGray           ctermfg=39   ctermbg=248  cterm=NONE
 
 hi MYYellow             ctermfg=226  ctermbg=NONE cterm=NONE
+hi MYYellowBold         ctermfg=226  ctermbg=NONE cterm=BOLD
 hi MYYellowItalic       ctermfg=226  ctermbg=NONE cterm=italic
+hi MYYellowBlack        ctermfg=226  ctermbg=232  cterm=NONE
 
 hi MYOrange             ctermfg=214  ctermbg=NONE cterm=NONE
+hi MYOrangeUnderline    ctermfg=214  ctermbg=NONE cterm=UNDERLINE
+hi MYOrangeBlackItalic  ctermfg=214  ctermbg=232  cterm=italic
 
 hi MYRed                ctermfg=196  ctermbg=NONE cterm=NONE
+hi MYRedBold            ctermfg=196  ctermbg=NONE cterm=BOLD
+hi MYRedItalic          ctermfg=196  ctermbg=NONE cterm=ITALIC
+hi MYRedYellow          ctermfg=196  ctermbg=226  cterm=NONE
+hi MYRedYellowBold      ctermfg=196  ctermbg=226  cterm=bold
+hi MYRedBlack           ctermfg=196  ctermbg=232  cterm=NONE
 
 hi MYPink               ctermfg=199  ctermbg=NONE cterm=NONE
 hi MYPinkItalic         ctermfg=199  ctermbg=NONE cterm=italic
+hi MYPinkBold           ctermfg=199  ctermbg=NONE cterm=BOLD
 hi MYRedPink            ctermfg=162  ctermbg=NONE cterm=NONE
 
 hi MYPurple             ctermfg=127  ctermbg=NONE cterm=NONE
+hi MYPurpleGreen        ctermfg=127	 ctermbg=121  cterm=NONE
 
+hi MYNone               ctermfg=NONE ctermbg=NONE cterm=NONE
+hi MYInverse            ctermfg=NONE ctermbg=NONE cterm=INVERSE
+hi MYUnderline          ctermfg=NONE ctermbg=NONE cterm=underline
 
 
 
@@ -116,33 +128,33 @@ hi MYPurple             ctermfg=127  ctermbg=NONE cterm=NONE
 " Basic Highlighting (see :help group-name)
 " =========================================
 " 196 121 is the test
-hi Comment 			ctermfg=248  ctermbg=NONE cterm=NONE
+hi! link Comment                        MYGray
 
-hi Constant 		ctermfg=39 	 ctermbg=NONE cterm=NONE
-hi String 			ctermfg=214  ctermbg=NONE cterm=NONE
-hi Character 		ctermfg=214  ctermbg=NONE cterm=NONE
+hi! link Constant                       MYBlue
+hi! link String                         MYOrange
+hi! link Character                      MYOrange
 " Number
 " Boolean
 " Float
 
 " any variable name 
-hi Identifier 		ctermfg=121  ctermbg=NONE cterm=NONE
-hi Function 		ctermfg=127  ctermbg=NONE cterm=NONE
+hi! link Identifier                     MYGreen
+hi! link Function                       MYRedPink
 
 " (such as: echo, grep, printf, exit, ;;, command...)
-hi Statement	   ctermfg=127 ctermbg=NONE cterm=bold
+hi! link Statement                      MYPinkItalic
 " if, then, else, endif, switch, etc,
-hi Conditional	   ctermfg=226 ctermbg=NONE cterm=NONE
+hi! link Conditional                    MYYellowItalic
 " for, do, while, etc,(include <char> ?>
-hi Repeat	   ctermfg=226 ctermbg=NONE cterm=NONE
+hi! link Repeat                         MYYellowItalic
 " case, default, etc,
-hi Label	   ctermfg=226 ctermbg=NONE cterm=NONE
+hi! link Label                          MYYellowItalic
 " sizeof, +, *, etc,
-hi Operator	   ctermfg=196 ctermbg=NONE cterm=NONE
+hi! link Operator                       MYRed
 "keyword of golang
-hi Keyword	   ctermfg=199 ctermbg=NONE cterm=NONE
+hi! link Keyword                        MYGrayItalic
 " try, catch, throw
-hi Exception	   ctermfg=226 ctermbg=NONE cterm=NONE
+hi! link Exception                      MYYellowItalic
 
 " generic Preprocessor
 "hi PreProc	   ctermfg=#E36660 ctermbg=NONE cterm=NONE
@@ -155,19 +167,19 @@ hi Exception	   ctermfg=226 ctermbg=NONE cterm=NONE
 " preprocessor #if, #else, #endif, etc,
 " PreCondit	ctermfg=#E36660 ctermbg=NONE cterm=NONE
 
-" int, long, char, etc,
-hi Type		   ctermfg=199  ctermbg=NONE cterm=NONE
+" int, long, char, link, ctermfg, ctermbg, cterm, etc
+hi! link Type                           MYBlueGreenItalic
 " static, register, volatile, etc, 
-hi StorageClass	   ctermfg=196  ctermbg=NONE cterm=NONE
+hi! link StorageClass                   MYRed
 " struct, union, enum, etc, 
-hi Structure	   ctermfg=199  ctermbg=NONE cterm=NONE
+hi! link Structure                      MYBlueGreenItalic
 " A typedef
-hi Typedef	   ctermfg=196  ctermbg=NONE cterm=NONE
+hi! link Typedef                        MYRed
 
 " any special symbol(such as:markdown ### ```java...)
-hi Special	   ctermfg=226 ctermbg=NONE cterm=NONE
+hi! link Special                        MYYellow
 " special character in a constant TODO
-hi SpecialChar	   ctermfg=196 ctermbg=121 cterm=NONE"
+hi! link SpecialChar                    MYTest
 " you can use CTRL-] on this
 " Tag	ctermfg=#848326 ctermbg=NONE cterm=NONE""
 " character that needs attention
@@ -178,166 +190,166 @@ hi SpecialChar	   ctermfg=196 ctermbg=121 cterm=NONE"
 " Debug	ctermfg=#848326 ctermbg=NONE cterm=NONE""
 
 " text that stands out, HTML links(such as: markdown[]())
-hi Underlined	   ctermfg=39  ctermbg=NONE  cterm=underline
+hi! link Underlined                     MYBlueUnderline
 
 " left blank, hidden hl-Ignore TODO
-hi Ignor	   ctermfg=196	ctermbg=121  cterm=underline
+hi! link Ignor                          MYTest
 
 " any erroneous construct
-hi Error	   ctermfg=15   ctermbg=196  cterm=bold
+hi! link Error                          MYWhiteRedBold
 
 " anything that needs extra attention; mostly the keywords TODO FIXME and XXX
-hi Todo		   ctermfg=232  ctermbg=226  cterm=bold
+hi! link Todo                           MYBlackYellowBold
 
 
 
 " Extended Highlighting (see :help highlight-default)
 " ====================================================
 " used for the columns set with 'colorcolumn' TODO
-hi ColorColumn	   ctermfg=39   ctermbg=127  cterm=NONE
+hi! link ColorColumn                    MYTest
 " placeholder characters substituted for concealed TODO
-hi Conceal	   ctermfg=39	ctermbg=127  cterm=NONE
+hi! link Conceal                        MYTest
 " the character under the cursor TODO
-hi Cursor	   ctermfg=39	ctermbg=127  cterm=NONE
+hi! link Cursor                         MYTest
 " the chracter under the cursor when 'language-mapping' is used TODO
-hi lCursor	   ctermfg=39	ctermbg=127  cterm=NONE
+hi! link lCursor                        MYTest
 " like cursor, but used when in IME mode 'cursorIM' TODO
-hi CursorIM	   ctermfg=39	ctermbg=127  cterm=NONE
+hi! link CursorIM                       MYTest
 " the screen column that the cursor is in when 'cursorcolumn' is set TODO
-hi CursorColumn	   ctermfg=39	ctermbg=127  cterm=NONE
+hi! link CursorColumn                   MYTest
 " the screen line that the cursor is in when 'cursorline' is set(:set cursorline and right line
 " block)
-hi CursorLine	   ctermfg=NONE	ctermbg=NONE  cterm=underline
+hi! link CursorLine	                    MYUnderline
 " directory names and other special names in listings head of vim-go error
-hi Directory	   ctermfg=39	ctermbg=232  cterm=NONE
+hi! link Directory                      MYBlueBlack
 
 " diff mode: add line
 "hi DiffAdd	   ctermfg=121  ctermbg=39 cterm=NONE
 " diff mode: change line TODO
-hi DiffChange   ctermfg=196  ctermbg=121 cterm=NONE
+hi! link DiffChange                     MYTest
 " diff mode: delete line
 "hi DiffDelete	   ctermfg=192  ctermbg=192 cterm=NONE
 " diff mode: change text within a changed line TODO
-hi DiffText    ctermfg=196  ctermbg=121  cterm=NONE
+hi! link DiffText                       MYTest
 "
 "*.diff +
-hi diffAdded   ctermfg=121  ctermbg=NONE cterm=NONE
+hi! link diffAdded                      MYGreen
 "*.diff -
-hi diffRemoved ctermfg=196  ctermbg=NONE cterm=NONE
+hi! link diffRemoved                    MYRed
 "Function TODO
-hi diffChanged ctermfg=196  ctermbg=121  cterm=NONE
+hi! link diffChanged                    MYTest
 "@@ -84,44 +84,49@@
-hi diffLine    ctermfg=127  ctermbg=NONE cterm=NONE
+hi! link diffLine                       MYRedPink
 "after diffline: static unsigned int tabspaces=8;
-hi diffSubName ctermfg=226  ctermbg=NONE cterm=NONE
+hi! link diffSubName                    MYYellow
 
 " filler lines (~) after the last line in the buffer. by default, this is highlighted like 'hl-nontext'
 " (in the end of file , the line which have '~' )
-hi EndOfBuffer	   ctermfg=248	ctermbg=NONE cterm=NONE
+hi! link EndOfBuffer                    MYGray
 " error message on the command line
-hi ErrorMsg	   ctermfg=15	ctermbg=196  cterm=bold
+hi! link ErrorMsg                       MYWhiteRedBold
 " the column separating vertically split windows(:vsp middle line)
-hi VertSplit	   ctermfg=232 	ctermbg=253  cterm=NONE
+hi! link VertSplit                      MYBlackSWhite
 " line used for closed folds
-hi Folded	   ctermfg=248	ctermbg=232  cterm=NONE
+hi! link Folded                         MYGrayBlack
 " 'foldcolumn' TODO
-hi FoldColumn	   ctermfg=39	ctermbg=127  cterm=NONE
+hi! link FoldColumn                     MYTest
 " column where 'signs' are displayed vim-ale-left-column
-hi SignColumn	   ctermfg=39	ctermbg=NONE  cterm=BOLD
+hi! link SignColumn                     MYBlueBold
 " 'incsearch' highlighting. also used for the text replaced with(use '/' to search) 
-hi Incsearch	   ctermfg=232	ctermbg=121  cterm=BOLD
+hi! link Incsearch                      MYBlackGreenBold
 
 " line number for ":number" and ":#" commands(left number)
-hi LineNr	   ctermfg=121	ctermbg=NONE cterm=NONE
+hi! link LineNr                         MYGreen
 " line number for when 'relativenumber' option is set, above the cursor line(left and above number)
-hi LineNrAbove	   ctermfg=248	ctermbg=NONE  cterm=NONE
+hi! link LineNrAbove                    MYGray
 " line number for when 'relativenumber' option is set, below the cursor line(left and below number)
-hi LineNrBelow	   ctermfg=248	ctermbg=NONE  cterm=NONE
+hi! link LineNrBelow                    MYGray
 " like lineNr when 'cursorline' is set and 'cursorlineopt' is set to 'number' or 'both', or 'relati
 " venumber' is set, for the cursor line(:set cursorline and left line block)
-hi CursorLineNr	   ctermfg=121	ctermbg=NONE  cterm=underline
+hi! link CursorLineNr                   MYGreenUnderline
 
 " the character under the cursor or just before it, if it is a paired bracket , and its match
-hi MatchParen	   ctermfg=226	ctermbg=248  cterm=BOLD
+hi! link MatchParen                     MYBlackYellowBold
 " 'showmode' message (e.g. --INSERT-- )
-hi ModeMsg	   ctermfg=248	ctermbg=NONE cterm=NONE
+hi! link ModeMsg                        MYGray
 " moremsg TODO
-hi MoreMsg	   ctermfg=39	ctermbg=127  cterm=NONE
+hi! link MoreMsg                        MYTest
 " '@' at the end of the window, characters from 'showbreak' and other characters that do not really exist in the text(e.g. ">" displayed when a double-wide character doesn't fit at the end of the line)(@@@ on the bottom)
-hi NonText	   ctermfg=214	ctermbg=NONE cterm=NONE
+hi! link NonText                        MYOrange
 " nomal text(normal mode)
-hi Normal	   ctermfg=253	ctermbg=NONE cterm=NONE
+hi! link Normal                         MYSWhite
 
 " popup menu: normal item ctrl + p
-hi Pmenu	   ctermfg=214  ctermbg=232 cterm=italic
+hi! link Pmenu                          MYOrangeBlackItalic
 " popup menu: selected item crl + p
-hi PmenuSel	   ctermfg=232  ctermbg=214 cterm=BOLD
+hi! link PmenuSel                       MYBlackOrangeBold
 " popup menu: scrollbar ctrl + p
-hi PmenuSbar	   ctermfg=39   ctermbg=232 cterm=NONE
+hi! link PmenuSbar                      MYBlueBlack
 " popup menu: thumb of the scrollbar ctrl + p
-hi PmenuThumb	   ctermfg=39   ctermbg=248 cterm=NONE
+hi! link PmenuThumb                     MYBlueGray
 
 " 'hit-enter' prompt and yes/no questions TODO
-hi Question	   ctermfg=127	ctermbg=121  cterm=NONE
+hi! link Question                       MYTest
 " current 'quickfix' item in the quickfix window vim-go-error
-hi QuickFixLine	   ctermfg=196	ctermbg=NONE  cterm=NONE
+hi! link QuickFixLine                   MYRed
 " last search pattern highlighting(hlsearch). also used for similar items that need to stand out.
 " like vim-go all same variate hilight
-hi Search	   ctermfg=232	ctermbg=214  cterm=BOLD
+hi! link Search                         MYBlackOrangeBold
 " meta 	and special keys listed with ":map", also for text used. to show unprintable characters in
 " the text, 'listchars'. Generally: text that is displayed dirrently from what is reallyis. TODO
-hi SpecialKey	   ctermfg=127	ctermbg=121  cterm=NONE
+hi! link SpecialKey                     MYTest
 " word that is not recognized by the spellchecker. this will be combined with the highlighting used
 " otherwise(:set spell)
-hi SpellBad	   ctermfg=15	ctermbg=196  cterm=BOLD
+hi! link SpellBad                       MYBWhiteRedBold
 " word that should start with a capital. this will be combined with the hightlighting used otherwise
 " (first letter of sentence)
-hi SpellCap	   ctermfg=196	ctermbg=226  cterm=BOLD
+hi! link SpellCap                       MYRedYellowBold
 " word that is recognized by the spellchecker as one that is. used in another region. this will be
 " combined with the highlighting used otherwise.
-hi SpellLocal	   ctermfg=127	ctermbg=121  cterm=NONE
+hi! link SpellLocal                     MYPurpleGreen
 " word that is recognized by the spell checker as one that is hardly ever used. TODO
-hi SpellRare	   ctermfg=127	ctermbg=121  cterm=NONE
+hi! link SpellRare                      MYTest
 
 " status line of current window(bottom)
-hi StatusLine	   ctermfg=232	ctermbg=253  cterm=NONE
+hi! link StatusLine                     MYBlackSWhite
 " status lines of not-current windows. if this is equal to 'statusline' vim will use '^^^' in the
 " status line of the current window.(other bottom)
-hi StatusLineNC	   ctermfg=232	ctermbg=244  cterm=NONE
+hi! link StatusLineNC                   MYBlackBBlack
 " status line of current window. if it is a 'terminal' window. command :term ...
-hi StatusLineTerm  ctermfg=232	ctermbg=253  cterm=NONE
+hi! link StatusLineTerm                 MYBlackSWhite
 " status lines of not-current windows that is a 'terminal' window  command :term ...
-hi StatusLineTermNC ctermfg=232	ctermbg=244  cterm=NONE
+hi! link StatusLineTermNC               MYBlackBBlack
 " statu line custom
-hi User1 			ctermfg=196 ctermbg=NONE  cterm=BOLD
-hi User2 			ctermfg=214 ctermbg=NONE  cterm=NONE
-hi User3 			ctermfg=121 ctermbg=NONE  cterm=NONE
-hi User4 			ctermfg=253 ctermbg=NONE  cterm=NONE
-hi User5 			ctermfg=232 ctermbg=248  cterm=BOLD
-hi User6 			ctermfg=226 ctermbg=NONE  cterm=BOLD
-hi User7 			ctermfg=199 ctermbg=NONE  cterm=NONE
-hi User8 			ctermfg=121 ctermbg=NONE  cterm=BOLD
-hi User9 			ctermfg=232 ctermbg=248  cterm=BOLD
+hi! link User1                          MYRedBold
+hi! link User2                          MYOrange
+hi! link User3                          MYGreen
+hi! link User4                          MYSWhite
+hi! link User5                          MYBlackGrayBold
+hi! link User6                          MYYellowBold
+hi! link User7                          MYPink
+hi! link User8                          MYGreenBold
+hi! link User9                          MYBlackGrayBold
 
 " tab pages line, not ative tab page label  file which no select
-hi TabLine	   ctermfg=248	ctermbg=NONE  cterm=underline
+hi! link TabLine                        MYGray
 " tab pages line, where there are no labels  blank
-hi TabLineFill	   ctermfg=248	ctermbg=NONE  cterm=NONE
+hi! link TabLineFill                    MYGray
 " tab pages line, active tab page label  file which select
-hi TabLineSel	   ctermfg=121	ctermbg=NONE  cterm=underline
+hi! link TabLineSel                     MYGreenUnderline
 " 'terminal' window command :term ...
-hi Terminal	   ctermfg=214	ctermbg=NONE  cterm=NONE
+hi! link Terminal                       MYOrange
 " titles for output from ':set all', ':autocmd' etc(such as: markdown ## xxx)
-hi Title	   ctermfg=121	ctermbg=NONE cterm=NONE
+hi! link Title                          MYGreen
 " visual mode selection
-hi Visual	   ctermfg=232	ctermbg=253  cterm=NONE
+hi! link Visual                         MYBlackSWhite
 " visual mode selection when vim is 'not owning the selection'. only x11gui's 'gui-x1' and
 " 'xterm-clipboard' supports this. TODO
-hi VisualNOS	   ctermfg=127	ctermbg=121  cterm=NONE
+hi! link VisualNOS                      MYTest
 " warning message
-hi WarningMsg	   ctermfg=196	ctermbg=226  cterm=NONE
+hi! link WarningMsg                     MYRedYellow
 " current match in 'wildmenu' completion TODO
-hi WildMenu	   ctermfg=127	ctermbg=121  cterm=NONE
+hi! link WildMenu                       MYTest
 
 " current font, background and foreground colors of the menus. also used for the toolbar. applicable
 " highlight arguments: font, guibg, guifg. for motif and athna the font argument actually. specifies
@@ -401,47 +413,47 @@ hi link helpHyperTextJump Type
 "hi mkdDelimiter ctermfg=226 ctermbg=226 cterm=NONE
 "hi mkdListItem  ctermfg=226 ctermbg=226 cterm=NONE
 "
-hi markdownCode	            ctermfg=214 ctermbg=NONE cterm=NONE
+hi! link markdownCode                   MYOrange
 "hi markdownError            ctermfg=15  ctermbg=196  cterm=BOLD
 " \t<content>
-hi markdownCodeBlock        ctermfg=214 ctermbg=NONE cterm=underline
+hi! link markdownCodeBlock              MYOrangeUnderline
 
-hi markdownH1                    	ctermfg=232 ctermbg=NONE cterm=NONE
-hi markdownH2                    	ctermfg=127 ctermbg=NONE cterm=NONE
-hi markdownH3      					ctermfg=199 ctermbg=NONE cterm=NONE
-hi markdownH4                    	ctermfg=196 ctermbg=NONE cterm=NONE
+hi! link markdownH1                     MYBlack
+hi! link markdownH2                     MYPurple
+hi! link markdownH3                     MYPink
+hi! link markdownH4                     MYRed
 "hi markdownH5                    htmlH5
 "hi markdownH6                    htmlH6
-hi markdownHeadingRule           	ctermfg=121 ctermbg=121  cterm=NONE
-hi markdownHeadingDelimiter      	ctermfg=244 ctermbg=NONE cterm=NONE
-hi markdownOrderedListMarker     	ctermfg=248 ctermbg=232 cterm=italic
-hi markdownListMarker            	ctermfg=232 ctermbg=226 cterm=BOLD
-hi markdownBlockquote            	ctermfg=226 ctermbg=NONE cterm=NONE
-hi markdownRule                  	ctermfg=121 ctermbg=121  cterm=NONE
+hi! link markdownHeadingRule            MYTest
+hi! link markdownHeadingDelimiter       MYBBlack
+hi! link markdownOrderedListMarker      MYGrayBlackItalic
+hi! link markdownListMarker             MYBlackYellowBold
+hi! link markdownBlockquote             MYYellow
+hi! link markdownRule                   MYTest
 "
-hi markdownFootnote              	ctermfg=121 ctermbg=121  cterm=NONE
-hi markdownFootnoteDefinition    	ctermfg=121 ctermbg=121  cterm=NONE
+hi! link markdownFootnote               MYTest
+hi! link markdownFootnoteDefinition     MYTest
 "
-hi markdownLinkText              	ctermfg=39  ctermbg=NONE  cterm=NONE
-hi markdownIdDeclaration         	ctermfg=121 ctermbg=121  cterm=NONE
-hi markdownId                    	ctermfg=121 ctermbg=121  cterm=NONE
-hi markdownAutomaticLink         	ctermfg=121 ctermbg=121  cterm=NONE
-hi markdownUrl                   	ctermfg=39  ctermbg=NONE cterm=underline
-hi markdownUrlTitle              	ctermfg=121 ctermbg=121  cterm=NONE
-hi markdownIdDelimiter           	ctermfg=121 ctermbg=121  cterm=NONE
-hi markdownUrlDelimiter          	ctermfg=121 ctermbg=121  cterm=NONE
-hi markdownUrlTitleDelimiter     	ctermfg=121 ctermbg=121  cterm=NONE
+hi! link markdownLinkText               MYBlue
+hi! link markdownIdDeclaration          MYTest
+hi! link markdownId                     MYTest
+hi! link markdownAutomaticLink          MYTest
+hi! link markdownUrl                    MYBlueUnderline
+hi! link markdownUrlTitle               MYTest
+hi! link markdownIdDelimiter            MYTest
+hi! link markdownUrlDelimiter           MYTest
+hi! link markdownUrlTitleDelimiter      MYTest
 "
-hi markdownItalic                ctermfg=121 ctermbg=NONE cterm=italic
-hi markdownItalicDelimiter       ctermfg=244 ctermbg=NONE cterm=NONE
-hi markdownBold                  ctermfg=121 ctermbg=NONE cterm=BOLD
-hi markdownBoldDelimiter         ctermfg=244 ctermbg=NONE cterm=NONE
-hi markdownBoldItalic            ctermfg=121 ctermbg=NONE cterm=NONE
-hi markdownBoldItalicDelimiter   ctermfg=244 ctermbg=NONE cterm=NONE
-hi markdownCodeDelimiter         ctermfg=244 ctermbg=NONE cterm=NONE
+hi! link markdownItalic                 MYGreenItalic
+hi! link markdownItalicDelimiter        MYBBlack
+hi! link markdownBold                   MYGreenBold
+hi! link markdownBoldDelimiter          MYBBlack
+hi! link markdownBoldItalic             MYGreen
+hi! link markdownBoldItalicDelimiter    MYBBlack
+hi! link markdownCodeDelimiter          MYBBlack
 "
-hi markdownEscape                ctermfg=121 ctermbg=121  cterm=NONE
-hi markdownError                 ctermfg=121 ctermbg=121  cterm=NONE
+hi! link markdownEscape                 MYTest
+hi! link markdownError                  MYTest
 
 
 
@@ -496,10 +508,10 @@ hi link jsRegexpCharClass SpecialChar
 
 " gitgutter
 " =============
-highlight GitGutterAdd    		 ctermfg=121 ctermbg=NONE cterm=BOLD
-highlight GitGutterChange 		 ctermfg=226 ctermbg=NONE cterm=BOLD
-highlight GitGutterDelete 		 ctermfg=196 ctermbg=NONE cterm=BOLD
-highlight GitGutterChangeDelete  ctermfg=199 ctermbg=NONE cterm=BOLD
+hi! link GitGutterAdd                   MYGreenBold
+hi! link GitGutterChange                MYYellowBold
+hi! link GitGutterDelete                MYRedBold
+hi! link GitGutterChangeDelete          MYPinkBold
 
 
 
@@ -509,46 +521,46 @@ highlight GitGutterChangeDelete  ctermfg=199 ctermbg=NONE cterm=BOLD
 " vim-go
 " =============
 " use function
-hi link goFunctionCall 				MYRedPink
+hi! link goFunctionCall                 MYRedPink
 " function name 
 "hi goFunction 			
 " "string"
-hi link goString 					MYOrange
+hi! link goString                       MYOrange
 " `string`
-hi link goRawString 				MYOrange
+hi! link goRawString                    MYGray
 " imprt "string"
-hi link goImportString 				MYOrange
+hi! link goImportString                 MYOrange
 " 'c'
-hi link goCharacter 				MYOrange
+hi! link goCharacter                    MYOrange
 " i := 
-hi link goVarDefs 					MYGreen
+hi! link goVarDefs                      MYGreen
 " i = 
-hi link goVarAssign 				MYWhite
+hi! link goVarAssign                    MYWhite
 " ()
-hi goParen 				ctermfg=253 ctermbg=NONE cterm=NONE
+hi! link goParen                        MYSWhite
 " {}
-hi goBlock 				ctermfg=199 ctermbg=NONE cterm=NONE
-" name in type ... XXXX
-hi link goTypeName 					MYBlueGreenItalic
+hi! link goBlock                        MYGray
+" type <name> XXXX
+hi! link goTypeName                     MYBlueGreenItalic
 " type
-hi link goTypeDecl 					MYGrayItalic
+hi! link goTypeDecl                     MYGrayItalic
 "goReceiverType
 " Stucdent{}
-hi link goTypeConstructor 			MYBlueGreenItalic
-" strut in type name ....
-hi link goDeclType 					MYGrayItalic
+hi! link goTypeConstructor              MYBlueGreenItalic
+" type name <...>
+hi! link goDeclType                     MYGrayItalic
 " func
-hi link goDeclaration 				MYGrayItalic
+hi! link goDeclaration                  MYGrayItalic
 " chan map bool string error any comparable
-hi link goType 						MYBlueGreenItalic
+hi! link goType                         MYBlueGreenItalic
 " int int8 int16 int32 int64 rune
-hi link goSignedInts 				MYBlueGreenItalic
+hi! link goSignedInts                   MYBlueGreenItalic
 " byte uint uint8 uint16 uint32 uint64 uintptr
-hi link goUnsignedInts 				MYBlueGreenItalic
+hi! link goUnsignedInts                 MYBlueGreenItalic
 " float32 float64
-hi link goFloats 					MYBlueGreenItalic
+hi! link goFloats                       MYBlueGreenItalic
 " complex64 complex128
-hi link goComplexes					MYBlueGreenItalic
+hi! link goComplexes                    MYBlueGreenItalic
 " "%t"
 "hi link goEscapeC 				yellow_NONE_NONE
 hi goEscapeX 			ctermfg=121 ctermbg=121  cterm=underline
@@ -560,13 +572,13 @@ hi goEscapeError 		ctermfg=121 ctermbg=121  cterm=underline
 "hi link goSpecialString 		yellow_NONE_NONE 
 hi goStringGroup 		ctermfg=121 ctermbg=121  cterm=underline
 " var
-hi link goVar 						MYGreenItalic
+hi! link goVar                          MYGreenItalic
 " const
-hi link goConst 					MYBlueItalic
+hi! link goConst                        MYBlueItalic
 " true false
-hi link goBoolean 					MYBlueItalic
+hi! link goBoolean                      MYBlueItalic
 " nil iota
-hi link goPredefinedIdentifiers 	MYBlueItalic
+hi! link goPredefinedIdentifiers        MYBlueItalic
 
 
 " // /* */
@@ -634,28 +646,28 @@ hi goImaginary 			ctermfg=121 ctermbg=121 cterm=underline
 hi goImaginaryFloat 	ctermfg=121 ctermbg=121 cterm=underline
 hi goVarArgs 			ctermfg=199  ctermbg=199 cterm=underline
 " struct.property
-hi goField 				ctermfg=253 ctermbg=NONE cterm=NONE
+hi! link goField                        MYSWhite
 " append cap close complex copy delete imag len
 " make new panic print println real recover
-hi link goBuiltins 					MYPinkItalic
+hi! link goBuiltins                     MYPinkItalic
 " defer go goto return break continue fallthrough
-hi link goStatement 				MYYellowItalic
+hi! link goStatement                    MYYellowItalic
 " if else switch select
-hi link goConditional 				MYYellowItalic
+hi! link goConditional                  MYYellowItalic
 " case default
-hi link goLabel 					MYYellowItalic
+hi! link goLabel                        MYYellowItalic
 " for-range
-hi link goRepeat 					MYYellowItalic
+hi! link goRepeat                       MYYellowItalic
 "import
-hi link goImport 					MYYellowItalic
+hi! link goImport                       MYYellowItalic
 " package
-hi link goPackage 					MYYellowItalic
+hi! link goPackage                      MYYellowItalic
 " %d %s %v
-hi link goFormatSpecifier 			MYYellowItalic
+hi! link goFormatSpecifier              MYYellowItalic
 hi goPackageComment 	ctermfg=226 ctermbg=226 cterm=underline
 
 " unsafe\.Pointer reflect\.\%(Kind\|Type\|Value io\.\%(Reader\|ReadSeeker context\.\%(Context bytes\.\%(Buffer
-hi link goExtraType 				MYRed
+hi! link goExtraType                    MYRedItalic
 " == * & + 
 "hi goOperator 			ctermfg=248 ctermbg=NONE cterm=NONE
 "hi goPointerOperator 	ctermfg=121  ctermbg=NONE cterm=underline
@@ -683,38 +695,38 @@ hi goStringGroup 			ctermfg=121 ctermbg=121 cterm=underline
 " ===Diagnostics related~
 "hi CocFadeOut* for faded out text, such as for highlighting unnecessary code.
 " sign
-hi   CocErrorSign              ctermfg=196   ctermbg=NONE   cterm=NONE
-hi   CocWarningSign            ctermfg=226   ctermbg=NONE   cterm=NONE
+hi! link CocErrorSign                   MYRed
+hi! link CocWarningSign                 MYYellow
 hi   CocInfoSign ctermfg=121   ctermbg=121    cterm=NONE
 " error left symbols
-hi   CocHintSign ctermfg=196   ctermbg=NONE    cterm=NONE
+hi! link CocHintSign                    MYRed
 " specific content
-hi   CocErrorHighlight         ctermfg=232   ctermbg=196   cterm=BOLD
-hi   CocWarningHighlight       ctermfg=232   ctermbg=226   cterm=BOLD
+hi! link CocErrorHighlight              MYBlackRedBold
+hi! link CocWarningHighlight                MYBlackYellowBold
 hi   CocInfoHighlight ctermfg=121   ctermbg=121    cterm=NONE
 hi   CocHintHighlight ctermfg=121   ctermbg=121    cterm=NONE
 "hi CocDeprecatedHighlight* for deprecated code range, links to
 " |CocStrikeThrough| by default.
 "hi CocUnusedHighlight* for unnecessary code range, links to |CocFadeOut| by default.
 " line
-hi   CocErrorLine     ctermfg=NONE   ctermbg=NONE   cterm=NONE
-hi   CocWarningLine   ctermfg=NONE   ctermbg=NONE   cterm=NONE
+hi! link CocErrorLine                   MYNone
+hi! link CocWarningLine                 MYNone
 hi   CocInfoLine ctermfg=121   ctermbg=121    cterm=NONE
 " error line color
-hi   CocHintLine ctermfg=NONE   ctermbg=NONE    cterm=NONE
+hi! link CocHintLine                    MYNone
 
 " ===Document highlight related~
 "Highlights used for highlighting same symbols in the buffer at the current cursor position.
 " default symbol highlight, such as same symbol
-hi CocHighlightText ctermfg=NONE   ctermbg=NONE    cterm=inverse
+hi! link CocHighlightText               MYInverse
 "hi *CocHighlightRead* for `Read` kind of document symbol.
 "hi *CocHighlightWrite* for `Write` kind of document symbol.
 
 " ===Float window/popup related~
 "hi CocFloating ctermfg=121 ctermbg=121 cterm=NONE
 " Default link to |NormalFloat| on neovim and|`Pmenu| on vim.
-hi CocErrorFloat   		ctermfg=196 ctermbg=232 cterm=NONE
-hi CocWarningFloat 		ctermfg=226 ctermbg=232 cterm=NONE
+hi! link CocErrorFloat                  MYRedBlack
+hi! link CocWarningFloat                MYYellowBlack
 hi CocInfoFloat ctermfg=121 ctermbg=121 cterm=NONE
 hi CocHintFloat ctermfg=121 ctermbg=121 cterm=NONE
 
@@ -732,7 +744,7 @@ hi CocHintFloat ctermfg=121 ctermbg=121 cterm=NONE
 
 " Popup menu related~
 " match input key
-hi CocPumSearch 			ctermfg=39 ctermbg=NONE cterm=NONE
+hi! link CocPumSearch                   MYBlue
 " end of suggest key (~)
 "hi CocPumDetail 			ctermfg=121 ctermbg=121 cterm=NONE
 "hi CocPumMenu 			ctermfg=121 ctermbg=121 cterm=NONE
@@ -749,7 +761,7 @@ hi CocPumSearch 			ctermfg=39 ctermbg=NONE cterm=NONE
 "hi CocSymbolPackage  
 "hi CocSymbolClass  
 " symbol(f) of outline
-hi CocSymbolMethod  ctermfg=127 ctermbg=NONE cterm=NONE
+hi! link CocSymbolMethod                MYPurple
 "hi CocSymbolProperty  
 "hi CocSymbolField  
 "hi CocSymbolConstructor  
@@ -778,7 +790,7 @@ hi CocSymbolMethod  ctermfg=127 ctermbg=NONE cterm=NONE
 "CocCursorRange* for ranges of activated cursors.
 "CocHoverRange* for range of current hovered symbol.
 " such as: select suggest
-hi CocMenuSel 					ctermfg=232 ctermbg=214 cterm=BOLD
+hi! link CocMenuSel                     MYBlackOrangeBold
 "CocMenuSel* for current menu item in menu dialog, works on neovim only since
 "vim doesn't support change highlight group of cursorline inside popup.
 "CocSelectedRange* for highlight ranges of outgoing calls.
