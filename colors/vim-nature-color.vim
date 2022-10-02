@@ -457,50 +457,13 @@ hi! link markdownError                  MYTest
 
 
 
+
+
 " Shell Syntax Highlighting
 " =============================
 hi link shLoop           shConditional
 hi link shShellVariables Type
 hi link shFunction       Function
-
-
-
-" HTML Syntax Highlighting
-" ========================
-"  https://github.com/othree/html5.vim
-"hi htmlTag     ctermfg=#7E7779 ctermbg=NONE cterm=NONE
-"hi htmlEndTag  ctermfg=#7E7779 ctermbg=NONE cterm=NONE
-hi link htmlTagName     Repeat
-hi link djangoVarBlock  Normal
-hi link djangoTagBlock  Normal
-hi link djangoStatement Constant
-"    -htmlBold
-"    - htmlBoldUnderline
-"    - htmlBoldUnderlineItalic
-"    - htmlUnderline
-"    - htmlUnderlineItalic
-"    - htmlItalic
-"    - htmlTitle for titles
-"    - htmlH1 - htmlH6 for headings
-"
-
-
-" JavaScript Syntax Highlighting
-" ==============================
-"  https://github.com/pangloss/vim-javascript
-"  https://github.com/othree/javascript-libraries-syntax.vim
-hi link jsStatement       pythonStatement
-hi link jsFunction        jsStatement
-hi link jsReturn          jsStatement
-hi link jsFuncCall        Function
-hi link jsonBraces        Operator
-hi link jsDomElemAttrs    Operator
-hi link jsDomElemFuncs    Function
-hi link jsHtmlElemAttrs   Operator
-hi link jsHtmlElemFuncs   Function
-hi link jsCssStyles       Operator
-hi link jsRegexpOr        SpecialChar
-hi link jsRegexpCharClass SpecialChar
 
 
 
