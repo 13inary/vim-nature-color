@@ -86,6 +86,7 @@ hi MYYellow             ctermfg=226  ctermbg=NONE cterm=NONE
 hi MYYellowBold         ctermfg=226  ctermbg=NONE cterm=BOLD
 hi MYYellowItalic       ctermfg=226  ctermbg=NONE cterm=italic
 hi MYYellowBlack        ctermfg=226  ctermbg=232  cterm=NONE
+hi MYYellowBlackBold    ctermfg=226  ctermbg=232  cterm=BOLD
 
 hi MYOrange             ctermfg=214  ctermbg=NONE cterm=NONE
 hi MYOrangeUnderline    ctermfg=214  ctermbg=NONE cterm=UNDERLINE
@@ -271,7 +272,7 @@ hi! link LineNrBelow                    MYGray
 hi! link CursorLineNr                   MYGreenUnderline
 
 " the character under the cursor or just before it, if it is a paired bracket , and its match
-hi! link MatchParen                     MYBlackYellowBold
+hi! link MatchParen                     MYYellowBlackBold
 " 'showmode' message (e.g. --INSERT-- )
 hi! link ModeMsg                        MYGray
 " moremsg. such as: when readonly open file, file is change
