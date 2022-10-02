@@ -63,6 +63,7 @@ hi MYSWhite             ctermfg=253  ctermbg=NONE cterm=NONE
 hi MYWhite              ctermfg=254  ctermbg=NONE cterm=NONE
 hi MYWhiteRedBold       ctermfg=254  ctermbg=196  cterm=bold
 hi MYBWhiteRedBold      ctermfg=15   ctermbg=196  cterm=bold
+hi MYWhiteBlueItalic    ctermfg=123  ctermbg=NONE cterm=ITALIC
 
 hi MYBlack              ctermfg=232  ctermbg=NONE cterm=NONE
 hi MYBlackSWhite        ctermfg=232  ctermbg=253  cterm=NONE
@@ -630,7 +631,7 @@ hi! link goFormatSpecifier              MYYellowItalic
 hi goPackageComment 	ctermfg=226 ctermbg=226 cterm=underline
 
 " unsafe\.Pointer reflect\.\%(Kind\|Type\|Value io\.\%(Reader\|ReadSeeker context\.\%(Context bytes\.\%(Buffer
-hi! link goExtraType                    MYRedItalic
+hi! link goExtraType                    MYWhiteBlueItalic
 " == * & + 
 "hi goOperator 			ctermfg=248 ctermbg=NONE cterm=NONE
 "hi goPointerOperator 	ctermfg=121  ctermbg=NONE cterm=underline
