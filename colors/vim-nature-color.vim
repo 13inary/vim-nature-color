@@ -828,3 +828,14 @@ hi CocSem_comment  ctermfg=121 ctermbg=121 cterm=NONE
 "hi link CocSem_number Number
 "hi link CocSem_regexp Normal
 "hi link CocSem_operator Operator
+
+
+
+
+
+" ===============
+" vim-translator
+" ==============
+hi! link TranslatorQuery                MYBlueGreenItalic
+hi! link TranslatorBorder               MYGray
+hi! link Translator                     MYGray
