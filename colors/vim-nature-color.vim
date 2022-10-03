@@ -418,7 +418,7 @@ hi link helpHyperTextJump Type
 hi! link markdownCode                   MYOrange
 "hi markdownError            ctermfg=15  ctermbg=196  cterm=BOLD
 " \t<content>
-hi! link markdownCodeBlock              MYOrangeUnderline
+hi! link markdownCodeBlock              MYOrange
 
 hi! link markdownH1                     MYBlack
 hi! link markdownH2                     MYPurple
@@ -439,11 +439,12 @@ hi! link markdownFootnoteDefinition     MYTest
 hi! link markdownLinkText               MYBlue
 hi! link markdownIdDeclaration          MYTest
 hi! link markdownId                     MYTest
-hi! link markdownAutomaticLink          MYTest
+" http... in <>
+hi! link markdownAutomaticLink          MYBlueUnderline
 hi! link markdownUrl                    MYBlueUnderline
 hi! link markdownUrlTitle               MYTest
 hi! link markdownIdDelimiter            MYTest
-hi! link markdownUrlDelimiter           MYTest
+hi! link markdownUrlDelimiter           MYGray
 hi! link markdownUrlTitleDelimiter      MYTest
 "
 hi! link markdownItalic                 MYGreenItalic
