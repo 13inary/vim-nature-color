@@ -209,8 +209,8 @@ hi! link Todo                           MYBlackYellowBold
 " ====================================================
 " used for the columns set with 'colorcolumn' TODO
 hi! link ColorColumn                    MYTest
-" placeholder characters substituted for concealed TODO
-hi! link Conceal                        MYTest
+" placeholder characters substituted for concealed. such as never be executed code with golang of coc.vim
+hi! link Conceal                        MYBlackYellowBold
 " the character under the cursor TODO
 hi! link Cursor                         MYTest
 " the chracter under the cursor when 'language-mapping' is used TODO
