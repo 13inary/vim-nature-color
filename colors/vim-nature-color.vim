@@ -449,7 +449,7 @@ hi! link markdownUrlTitleDelimiter      MYTest
 "
 hi! link markdownItalic                 MYGreenItalic
 hi! link markdownItalicDelimiter        MYBBlack
-hi! link markdownBold                   MYGreenBold
+hi! link markdownBold                   MYRedBold
 hi! link markdownBoldDelimiter          MYBBlack
 hi! link markdownBoldItalic             MYGreen
 hi! link markdownBoldItalicDelimiter    MYBBlack
