@@ -227,19 +227,20 @@ hi! link Directory                      MYBlueBlack
 
 " diff mode: add line
 "hi DiffAdd	   ctermfg=121  ctermbg=39 cterm=NONE
-" diff mode: change line TODO
-hi! link DiffChange                     MYTest
+hi! link DiffAdd                        MYBlackGreenBold
+" diff mode: change line
+hi! link DiffChange                     MYYellow
 " diff mode: delete line
-"hi DiffDelete	   ctermfg=192  ctermbg=192 cterm=NONE
-" diff mode: change text within a changed line TODO
-hi! link DiffText                       MYTest
+hi! link DiffDelete                     MYBlackRedBold
+" diff mode: change text in a changed line
+hi! link DiffText                       MYBlackOrangeBold
 "
 "*.diff +
 hi! link diffAdded                      MYGreen
 "*.diff -
 hi! link diffRemoved                    MYRed
 "Function TODO
-hi! link diffChanged                    MYTest
+hi! link diffChanged                    MYOrange
 "@@ -84,44 +84,49@@
 hi! link diffLine                       MYRedPink
 "after diffline: static unsigned int tabspaces=8;
